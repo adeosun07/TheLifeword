@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+<main>
+    <% if (locals.alert) { %>
+      <script>alert("<%= alert %>");</script>
+    <% } %>
+
+    <div class="login-container">
+        <form class="form" action="/login" method="post">
+            <p class="title">Login</p>
+            <p class="message">Login now to create posts. </p>     
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="username">
+                <span>Username</span>
+            </label> 
+            <label>
+                <input required="" placeholder="" type="password" class="input" name="password">
+                <span>Password</span>
+            </label>
+            <button class="submit">Login</button>
+        </form>
+    </div>
+</main>
+<%- include("partials/footer") %>

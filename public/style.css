@@ -1,0 +1,860 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: 	#4169E1;
+    color: #e0e0e0;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    position: sticky;
+    top:0;
+    background-color: #4169E1;
+    z-index: 1000;
+}
+.logo{
+    text-align: center;
+    height: 80px;
+}
+.logo>img{
+    height: 100%;
+    color: #F5F7FA;
+}
+nav{
+    background-color: inherit;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+}
+nav>.church-name{
+    padding: 0 5px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 867px){
+    nav>.church-name{
+        display: none;
+    }
+}
+nav>.navbar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 5px 0 0;
+    color: #647080;
+}
+nav .donation, nav .donation a, nav .donation a:visited{
+    background-color: #FFD700;
+    padding: 2px 3px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+}
+nav .menu-icon{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    background-color: #FFD700;
+}
+nav .menu-icon:hover, nav .donation:hover, nav .donation a:hover{
+    background-color: #00CED1;
+    color: #fff;
+}
+nav .menu-list{
+    background-color: inherit;
+    position: absolute;
+    height: 100vh;
+    width: 0;
+    padding: 20px 10px;
+    top: 0;
+    text-align: center;
+    transition: width 1s ease;
+    overflow: hidden;
+    left: -100%;
+}
+nav .menu-list.active{
+    width: 150px;
+    left: 0;
+}
+
+nav .menu-list li{
+    list-style: none;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    color: #647080;
+    background-color: #FFC107 ;
+    width: 120px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+nav .menu-list a, nav .menu-list a:visited{
+    text-decoration: none;
+    color: #647080;
+}
+nav .menu-list li:hover{
+    background-color: #00CED1;
+    color: #fff;
+}
+button{
+    background-color: #FFD700;
+    padding: 3px 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.19s ease;
+}
+button:hover{
+    background-color: #00CED1;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+.hero-image{
+    width: 100%;
+    margin: 0 0 20px 0;
+    animation: slide 4s ease-in;
+}
+.hero-image video{
+    width: 100%;
+}
+
+.intro, .founder{
+    display: flex;
+    margin: 30px 0;
+    background-color: #0e0d0d79;
+    padding: 10px 0;
+}
+.intro-text, .intro-img{
+    flex: 1;
+    height: 500px;
+}
+.intro-text, .founder-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 2rem;
+}
+.intro .intro-img1{
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.intro .intro-img2{
+    max-height: 150px;
+    max-width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* border: 1px solid black; */
+    object-fit: cover;
+    overflow: hidden;
+    /* margin-right: 8.5px; */
+}
+.intro-text{
+    border-radius: 10px;
+    margin: 10px;
+    animation: slide 5s ease-in;
+}
+@keyframes slide {
+    0%{opacity: 0;}
+    50%{opacity: 50%;}
+    100%{opacity: 100%;}
+}
+.intro img{
+    width: 100%;
+    height: 100%;
+}
+.slide-right{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 2s ease-out;
+}
+.slide-left{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 2s ease-out;
+}
+.slide.slide-active{
+    opacity: 1;
+    transform: translateX(0);
+}
+.founder-img, .founder-text{
+    flex: 1;
+    margin: 0 10px;
+}
+.founder-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.founder-text{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    animation: slide 5s ease-in;
+}
+.founder img{
+    width: 100%;
+}
+.s-container, .a-container{
+    display: flex;
+    gap: 10px;
+}
+.s-container .item{
+    flex: 10%;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+}
+.s-container .item iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#sermon .s-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+.s-container{
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px auto;
+}
+.a-container{
+    position: relative;
+    margin: 20px 0;
+}
+.delay{
+    animation-delay: 1s;
+}
+.a-container .article-img{
+    width: 100%;
+    max-height: 500px;
+}
+.a-container video{
+    width: 100%;
+    height: 100%;
+}
+.a-container .article-text{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #e0e0e0;
+    background-color: #00000050;
+    padding: 10px 10px;
+    animation: slide 5s ease-in;
+}
+.a-container .article-text .s-title{
+    font-weight: 700;
+    align-self: center;
+    color: #fff;
+}
+.a-container .article-text form{
+    text-align: center;
+    margin-top: 5px;
+}
+.article-text .preacher{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1em;
+}
+.giving{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10%;
+    height: 300px;
+    flex-direction: row-reverse;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.giving .item{
+    flex: 1;
+    width: 300px;
+    height: 300px;
+}
+.giving img{
+    width: 100%;
+    height: 100%;
+}
+.giving .giving-text{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   animation: slide 5s ease-in;
+   flex-wrap: wrap;
+   color: #fff;
+}
+.giving .giving-text p{
+    background-color: #0e0d0d79;
+    border-radius: 10px 0 10px 0;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.giving .giving-text .verse{
+    font-style: italic;
+    font-weight: 600;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    background-color: #0e0d0d79;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+footer .flogo{
+    height: 150px;
+}
+footer .flogo img{
+    height: 100%;
+}
+footer li{
+    list-style: none;
+    color: #e0e0e0;
+}
+footer a{
+    text-decoration: none;
+}
+footer li:hover{
+    color:#4169E1;
+    text-decoration: underline;
+}
+a img{
+    border: none;
+    outline: none;
+    height: 100%;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.icon-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 2;
+}
+.icon-content:hover .tooltip {
+  top: -50px;
+  opacity: 1;
+  visibility: visible;
+}
+.icon-content a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  overflow: hidden;
+  background-color: #fff;
+  color: #4d4d4d;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+.icon-content a .filled {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+.icon-content a:hover .filled {
+  height: 100%;
+}
+.icon-content a:hover {
+  color: #fff;
+  box-shadow: 3px 2px 45px 0px rgba(0, 0, 0, 0.5);
+}
+.icon-content a img {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.icon-content a[data-social="facebook"] .filled,
+.icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.icon-content a[data-social="youtube"] .filled,
+.icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #FF0000;
+}
+
+/* About Page */
+.about{
+    background-color: #0e0d0d79;
+    padding: 10px;
+}
+.about-img{
+    width: 500px;
+    height: 600px;
+    float: right;
+    animation: slide 5s ease-in;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 5px 10px;
+    color: #fff;
+    line-height: 0.5;
+}
+.about p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 5px;
+}
+.about .motto{
+    font-style: italic;
+    margin-top: 0;
+    font-size: 1rem;
+}
+.about .last{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* donation page */
+.give-online{
+    background-color: #0e0d0d79;
+    margin: 50px auto;
+    width: 260px;
+    height: 350px;
+}
+.e-card {
+  margin: 100px auto;
+  background: transparent;
+  box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+  position: relative;
+  top: 10px;
+  width: 240px;
+  height: 330px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+}
+.infotop {
+  text-align: center;
+  font-size: 15px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  line-height: 1.3;
+}
+.give-online .bank{
+    font-weight: 600;
+    font-size: 20px;
+}
+.give-online .name{
+    font-weight: 600;
+    font-size: 20px;
+}
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Article page */
+.article{
+    background-color: #0e0d0d79;
+}
+.article-title{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+.article-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin: 20px 0 5px 0;
+    flex-wrap: wrap;
+}
+.article-container .card {
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 15px 15px 30px #292828,
+             -15px -15px 30px #918f8f;
+  transition: 0.2s ease-in-out;
+}
+.article-container .img {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: linear-gradient(#e66465, #9198e5);
+  display: flex;
+  align-items: top;
+  justify-content: right;
+}
+.article-container .card2 .img, .article-container .card4 .img{
+    background: linear-gradient(#141E30, #243B55);
+} 
+.article-container .text {
+  height: 30%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: flex-end;
+}
+.article-container .text .p {
+  font-family: 'Lucida Sans' sans-serif;
+  color: #999999;
+  font-size: 13px;
+}
+.article-container .text .h3{
+    color:#1f1e1e;
+    font-size: 20px;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+.login-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+}
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #00bfff;
+}
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #00bfff;
+}
+.form label {
+  position: relative;
+}
+.form label .input {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+.form label .input + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #00bfff;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.input {
+  font-size: medium;
+}
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: #00bfff;
+}
+.submit:hover {
+  background-color: #00bfff96;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+.pagination a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 14px;
+  background: #eee;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+}
+.pagination a.active {
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+@media (max-width:460px){
+    .a-container>.article-text{
+        font-size: 0.6rem;
+        padding: 2px;
+    }
+    .article-text .preacher{
+        font-size: 1em;
+    }
+    .a-container .article-text .s-title{
+        font-size: 1rem;
+    }
+    .a-container .article-text p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 569px){
+    .about{
+        padding:10px 0 10px 0;
+    }
+    .about .about-text h1{
+        line-height: 0.8;
+    }
+    .about>.about-img{
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    margin: 0 0 15px 0;
+    }
+    .about .about-text h1{
+        font-size: 1.5rem;
+    }
+    .about .about-text p{
+        font-size: 1rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin: 5px;
+    }
+    .intro .intro-img1, .founder .founder-img{
+        width: 95%;
+        margin: 20px 0 0 0 10px;
+    }
+    .giving{
+        display: block;
+        position: relative;
+        width:100%;
+        margin: 0;
+    }
+    .giving .giving-img{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .giving .giving-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .giving .giving-text{
+        position: absolute;
+        top:0;
+        left:0;
+        transform: translateX(10%);
+    }
+    .a-container .article-text{
+        font-size: 1rem;
+    }
+}
+@media (max-width:985px){
+    .intro, .founder{
+        flex-direction: column;
+    }
+    .intro-text, .founder-text{
+        font-size: 1.6rem;
+    }
+    .intro .intro-img1, .founder .founder-img{
+        height: 400px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .intro .intro-img1{
+        margin-top: 20px;
+    }
+    .a-container .article-text{
+        font-size: 1.3rem;
+    }
+    .about-img{
+    width: 70%;
+    height: 600px;
+    float: none;
+    margin: 0 auto 15px;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    .about p{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        margin: 5px;
+    }
+}
+@media (max-width: 1095px){
+    .s-container .item{
+        flex:50%;
+    }
+    .giving .giving-img{
+        min-width: 200px;
+        min-height: 200px;
+    }
+}

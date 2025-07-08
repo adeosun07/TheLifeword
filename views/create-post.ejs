@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<main>
+    <% if (locals.alert) {%>
+        <script>alert("<%= alert %>");</script>
+    <%}%>
+    <section class="post">
+        <div class="login-container">
+            <h1><i>WELCOME!</i></h1>
+            <div class="create-post">
+                <form action="/create-post" method="POST" class="form" style="min-width:250px">
+                    <label for="title">Please enter your Blog's title</label>
+                    <input type="text" name="title" id="title" style="height: 30px">
+                    <label for="post">Please enter your Blog:</label>
+                    <textarea name="content" id="post" style="height: 200px"></textarea>
+                    <button type="submit" class="submit"> Submit </button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</main>
+<%- include('partials/footer') %>
