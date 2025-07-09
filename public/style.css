@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-*{
-    outline: 1px solid red;
-}
 body{
     background-color: 	#4169E1;
     color: #e0e0e0;
@@ -141,6 +138,9 @@ a{
     object-fit: cover;
     height: auto;
     pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .intro, .founder{
@@ -148,6 +148,7 @@ a{
     margin: 30px 0;
     background-color: #0e0d0d79;
     padding: 10px 0;
+    max-width: 100%;
 }
 .intro-text, .intro-img{
     flex: 1;
@@ -213,6 +214,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100%;
+    max-width: 100%;
 }
 .founder-text{
     border-radius: 10px;
@@ -257,6 +259,7 @@ a{
 .a-container{
     position: relative;
     margin: 20px 0;
+    max-width: 100%;
 }
 .delay{
     animation-delay: 1s;
