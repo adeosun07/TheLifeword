@@ -3,13 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+*{
+    outline: 1px solid red;
+}
 body{
     background-color: 	#4169E1;
     color: #e0e0e0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
 h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -135,10 +136,11 @@ a{
     animation: slide 4s ease-in;
 }
 .hero-image video{
-    max-width: 100%;
+    width: 100%;
     display: block;
     object-fit: cover;
     height: auto;
+    pointer-events: none;
 }
 
 .intro, .founder{
