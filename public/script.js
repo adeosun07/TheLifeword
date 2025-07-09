@@ -27,3 +27,14 @@ function handleImageScroll(){
 }
 window.addEventListener('scroll', handleImageScroll);
 
+window.addEventListener("DOMContentLoaded", () => {
+const video = document.querySelector(".hero video");
+if (video) {
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+    playPromise.catch(error => {
+        console.warn("Autoplay might be blocked on iOS:", error);
+    });
+    }
+}
+});

@@ -879,3 +879,24 @@ a img{
         min-height: 200px;
     }
 }
+
+body, html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.intro,
+.founder,
+.a-container,
+.giving {
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 100%;
+}
