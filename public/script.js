@@ -38,3 +38,11 @@ if (video) {
     }
 }
 });
+  window.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("bg-video");
+    if (video) {
+      video.play().catch(error => {
+        console.warn("iOS autoplay fallback error:", error);
+      });
+    }
+  });
