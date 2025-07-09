@@ -8,7 +8,8 @@ body{
     color: #e0e0e0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -134,9 +135,10 @@ a{
     animation: slide 4s ease-in;
 }
 .hero-image video{
-    width: 100%;
+    max-width: 100%;
     display: block;
     object-fit: cover;
+    height: auto;
 }
 
 .intro, .founder{
@@ -247,7 +249,7 @@ a{
 .s-container{
     justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    max-width: 90%;
     margin: 10px auto;
 }
 .a-container{
@@ -258,7 +260,7 @@ a{
     animation-delay: 1s;
 }
 .a-container .article-img{
-    width: 100%;
+    max-width: 100%;
     max-height: 500px;
 }
 .a-container video{
