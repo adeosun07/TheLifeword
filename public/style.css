@@ -8,6 +8,7 @@ body{
     color: #e0e0e0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -166,10 +167,8 @@ a{
     position: absolute;
     top: 0;
     right: 0;
-    /* border: 1px solid black; */
     object-fit: cover;
     overflow: hidden;
-    /* margin-right: 8.5px; */
 }
 .intro-text{
     border-radius: 10px;
