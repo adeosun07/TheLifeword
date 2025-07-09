@@ -144,6 +144,9 @@ a{
     height: 100%;
     pointer-events: none;
     z-index: -1;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .intro, .founder{
