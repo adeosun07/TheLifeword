@@ -8,7 +8,7 @@ body{
     color: #e0e0e0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-    width: 100%;
+    width: 100vw;
 }
 h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -135,6 +135,8 @@ a{
 }
 .hero-image video{
     width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .intro, .founder{

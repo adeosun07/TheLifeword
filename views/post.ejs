@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 <main>
-    <section class="blog">
+    <section class="blog" style="padding: 20px;">
         <h1><%= post.title %></h1>
         <p><%= post.content %></p>
         <p><em>Posted on: <%= new Date(post.created_at).toLocaleString() %></em></p>
